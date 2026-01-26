@@ -2,16 +2,28 @@
 // PORTFOLIO WEBSITE - JAVASCRIPT
 // ========================================
 
+console.log('script.js loaded!');
+
 // ========== NAVBAR ACTIVE LINK HIGHLIGHTING ==========
 document.addEventListener('DOMContentLoaded', function() {
-    initNavbarOffset(); // ensure CSS var matches actual navbar height (fallback for responsive / collapse)
-    initNavbarScrolling();
-    initSmoothScroll();
-    initProjectFiltering();
-    initProjectCarousel();
-    initContactForm();
-    initSkillsAnimation();
-    initThemeToggle(); // initialize theme toggle and restore persisted theme
+    console.log('DOMContentLoaded fired!');
+    
+    // Wrap each init function in try-catch to prevent one error from stopping others
+    try { initNavbarOffset(); } catch(e) { console.error('initNavbarOffset error:', e); }
+    try { initNavbarScrolling(); } catch(e) { console.error('initNavbarScrolling error:', e); }
+    try { initSmoothScroll(); } catch(e) { console.error('initSmoothScroll error:', e); }
+    try { initProjectFiltering(); } catch(e) { console.error('initProjectFiltering error:', e); }
+    try { initProjectCarousel(); } catch(e) { console.error('initProjectCarousel error:', e); }
+    try { initContactForm(); } catch(e) { console.error('initContactForm error:', e); }
+    try { initSkillsAnimation(); } catch(e) { console.error('initSkillsAnimation error:', e); }
+    
+    console.log('About to call initThemeToggle()');
+    try {
+        initThemeToggle();
+        console.log('initThemeToggle() completed');
+    } catch(e) {
+        console.error('initThemeToggle error:', e);
+    }
 });
 
 /**
@@ -151,6 +163,12 @@ function initProjectCarousel() {
     const leftArrow = document.getElementById('leftArrow');
     const rightArrow = document.getElementById('rightArrow');
     const dots = document.querySelectorAll('.dot');
+    
+    // Check if carousel elements exist before adding event listeners
+    if (!leftArrow || !rightArrow) {
+        console.warn('Carousel arrows not found, skipping carousel initialization');
+        return;
+    }
     
     leftArrow.addEventListener('click', previousSlide);
     rightArrow.addEventListener('click', nextSlide);
@@ -368,8 +386,13 @@ if (document.readyState === 'loading') {
  * - persists choice in localStorage
  */
 function initThemeToggle() {
+    console.log('initThemeToggle() function started');
     const toggleBtn = document.getElementById('themeToggle');
-    if (!toggleBtn) return;
+    console.log('toggleBtn element:', toggleBtn);
+    if (!toggleBtn) {
+        console.error('Theme toggle button not found!');
+        return;
+    }
 
     // Apply stored theme or use system preference if not set
     const stored = localStorage.getItem('theme');
@@ -412,19 +435,19 @@ function updateThemeIcon(themeName) {
     if (!iconEl) return;
 
     // Set the icon class explicitly to avoid leaving stale icon classes
-    // and ensure the icon always reflects the CURRENT theme (moon = dark, sun = light).
+    // Icon shows what will happen when clicked: moon = switch to dark, sun = switch to light
     if (themeName === 'dark-theme') {
-        iconEl.className = 'bi bi-moon-fill';
+        iconEl.className = 'bi bi-sun-fill';
         toggleBtn.setAttribute('aria-label', 'Switch to light theme');
         toggleBtn.setAttribute('title', 'Switch to light theme');
         toggleBtn.setAttribute('aria-pressed', 'true');
-        console.log('updateThemeIcon -> set to moon');
+        console.log('updateThemeIcon -> set to sun (currently dark)');
     } else {
-        iconEl.className = 'bi bi-sun-fill';
+        iconEl.className = 'bi bi-moon-fill';
         toggleBtn.setAttribute('aria-label', 'Switch to dark theme');
         toggleBtn.setAttribute('title', 'Switch to dark theme');
         toggleBtn.setAttribute('aria-pressed', 'false');
-        console.log('updateThemeIcon -> set to sun');
+        console.log('updateThemeIcon -> set to moon (currently light)');
     }
 
     // For accessibility, ensure the icon is announced as a button.
