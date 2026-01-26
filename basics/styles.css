@@ -1,0 +1,50 @@
+/* styles.css - basic, clean styles for simple.html */
+:root {
+    --bg: #f7f7f9;
+    --accent: #2b6cb0;
+    --muted: #6b7280;
+    --table-border: #e5e7eb;
+}
+* { box-sizing: border-box; }
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--bg);
+    color: #111827;
+    margin: 0;
+    padding: 2rem;
+    line-height: 1.6;
+}
+h1, h2, h3 { color: var(--accent); margin: 0 0 0.5rem; }
+p { margin: 0 0 1rem; }
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    box-shadow: 0 1px 2px rgba(16,24,40,0.03);
+    border-radius: 6px;
+    overflow: hidden;
+}
+th, td {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid var(--table-border);
+    text-align: left;
+}
+th { background: #f1f5f9; font-weight: 600; }
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+
+img { max-width: 100%; height: auto; border-radius: 6px; display: block; }
+
+form { background: white; padding: 1rem; border-radius: 6px; box-shadow: 0 1px 2px rgba(16,24,40,0.03); margin-top: 1rem; }
+input[type="text"], input[type="email"], textarea, select { width: 100%; padding: .5rem; border: 1px solid #d1d5db; border-radius: 4px; margin-top: .25rem; }
+
+button { padding: .5rem 1rem; border: none; background: var(--accent); color: white; border-radius: 4px; cursor: pointer; }
+button[type="reset"] { background: #6b7280; }
+
+audio, video { max-width: 100%; display: block; margin: 0.5rem 0; }
+
+@media (min-width: 600px) {
+    body { max-width: 800px; margin-left: auto; margin-right: auto; }
+}

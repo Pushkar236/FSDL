@@ -1,0 +1,389 @@
+/* About Page Styles */
+
+:root{
+  --pink:#ffd6e0;
+  --dark-pink:#ff7aa2;
+  --rose:#f7c6d3;
+  --muted:#6c6c6c;
+}
+
+body {
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: #fff;
+  color: #222;
+}
+
+/* Main container spacing - standardized across all pages */
+main {
+  padding-top: 1rem !important;
+  padding-bottom: 3rem !important;
+  margin: 0 !important;
+}
+
+/* Hero Banner */
+.about-hero {
+  min-height: 45vh;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.3) 100%), 
+              url('assets/hero.jpg') center / cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  padding: 40px 20px;
+}
+
+.about-hero-content {
+  animation: fadeInDown 0.8s ease;
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.about-hero-title {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 16px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.about-hero-subtitle {
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.9);
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+  margin: 0;
+}
+
+/* About Section */
+.about-section {
+  background: white;
+}
+
+.about-image-container {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.about-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 12px;
+}
+
+.about-content {
+  padding: 20px 0;
+}
+
+.about-heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #222;
+  margin-bottom: 24px;
+  position: relative;
+  padding-bottom: 16px;
+}
+
+.about-heading::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background: var(--dark-pink);
+  border-radius: 2px;
+}
+
+.about-text {
+  font-size: 1.05rem;
+  color: #666;
+  line-height: 1.8;
+  margin-bottom: 16px;
+  text-align: justify;
+}
+
+/* About Points */
+.about-points {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.about-point {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1rem;
+  color: #222;
+  font-weight: 500;
+}
+
+.about-point i {
+  color: var(--dark-pink);
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+/* Values Section */
+.about-values {
+  background: #f9f9f9;
+}
+
+.section-heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #222;
+  position: relative;
+  padding-bottom: 20px;
+}
+
+.section-heading::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: var(--dark-pink);
+  border-radius: 2px;
+}
+
+/* Value Cards */
+.value-card {
+  background: white;
+  border-radius: 12px;
+  padding: 32px 24px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  height: 100%;
+}
+
+.value-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12);
+}
+
+.value-icon {
+  font-size: 3rem;
+  color: var(--dark-pink);
+  margin-bottom: 16px;
+  display: inline-block;
+}
+
+.value-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #222;
+  margin-bottom: 12px;
+}
+
+.value-text {
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Stats Section */
+.about-stats {
+  background: linear-gradient(135deg, var(--dark-pink) 0%, #ff7aa2 100%);
+  color: white;
+}
+
+.stat-item {
+  padding: 30px 20px;
+}
+
+.stat-number {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.stat-label {
+  font-size: 1.1rem;
+  font-weight: 500;
+  opacity: 0.95;
+}
+
+/* Fade-in Animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .about-hero-title {
+    font-size: 3rem;
+  }
+
+  .about-hero-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .about-heading {
+    font-size: 2rem;
+  }
+
+  .section-heading {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-hero {
+    min-height: 35vh;
+    padding: 30px 15px;
+  }
+
+  .about-hero-title {
+    font-size: 2.5rem;
+    margin-bottom: 12px;
+  }
+
+  .about-hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .about-heading {
+    font-size: 1.75rem;
+    margin-bottom: 16px;
+  }
+
+  .about-text {
+    font-size: 1rem;
+    text-align: left;
+    line-height: 1.7;
+  }
+
+  .about-content {
+    padding: 20px 0;
+  }
+
+  .value-card {
+    padding: 24px 16px;
+  }
+
+  .value-icon {
+    font-size: 2.5rem;
+  }
+
+  .value-title {
+    font-size: 1.2rem;
+  }
+
+  .value-text {
+    font-size: 0.9rem;
+  }
+
+  .stat-number {
+    font-size: 2.5rem;
+  }
+
+  .stat-label {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .about-hero {
+    min-height: 30vh;
+    padding: 20px 15px;
+  }
+
+  .about-hero-title {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+
+  .about-hero-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .about-heading {
+    font-size: 1.5rem;
+    margin-bottom: 12px;
+  }
+
+  .about-heading::after {
+    width: 50px;
+    height: 3px;
+  }
+
+  .section-heading {
+    font-size: 1.5rem;
+  }
+
+  .section-heading::after {
+    width: 50px;
+    height: 3px;
+  }
+
+  .about-text {
+    font-size: 0.95rem;
+    margin-bottom: 12px;
+  }
+
+  .about-points {
+    gap: 10px;
+  }
+
+  .about-point {
+    font-size: 0.9rem;
+    gap: 10px;
+  }
+
+  .value-card {
+    padding: 20px 16px;
+    margin-bottom: 16px;
+  }
+
+  .value-icon {
+    font-size: 2rem;
+    margin-bottom: 12px;
+  }
+
+  .value-title {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+  }
+
+  .value-text {
+    font-size: 0.85rem;
+  }
+
+  .stat-item {
+    padding: 20px 10px;
+  }
+
+  .stat-number {
+    font-size: 2rem;
+    margin-bottom: 4px;
+  }
+
+  .stat-label {
+    font-size: 0.9rem;
+  }
+}

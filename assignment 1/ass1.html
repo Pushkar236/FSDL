@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Text Formatting Tags</title>
+
+    <style>
+        body {
+            background-image: url("bg.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: Arial, sans-serif;
+        }
+
+        table {
+            border-collapse: separate;
+            border-spacing: 8px 12px;
+            width: 80%;
+        }
+
+        th {
+            background: rgba(255, 0, 0, 0.445);
+            color: white;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        td {
+            background: rgba(255, 255, 255, 0.75);
+            padding: 12px;
+            text-align: center;
+            border: 1px solid #333;
+            border-radius: 10px;
+        }
+      
+        tbody tr:nth-child(even) td {
+            background: rgba(255, 192, 203, 0.6); 
+        }
+
+        caption h2 {
+            color: white;
+        }
+
+        code {
+            background: #eee;
+            padding: 4px 6px;
+            border-radius: 5px;
+            font-family: Consolas, monospace;
+        }
+    </style>
+</head>
+
+<body>
+<center>
+<table>
+    <caption align="top">
+        <h2><b>Text Formatting Tags</b></h2>
+    </caption>
+
+    <tr>
+        <th>HTML Tag</th>
+        <th>Description</th>
+        <th>Example Code</th>
+        <th>Output</th>
+    </tr>
+
+    <tbody>
+    <tr>
+        <td>&lt;b&gt;</td>
+        <td>Makes text bold</td>
+        <td><code>&lt;b&gt;Hello World&lt;/b&gt;</code></td>
+        <td><b>Hello World</b></td>
+    </tr>
+
+    <tr>
+        <td>&lt;i&gt;</td>
+        <td>Makes text italic</td>
+        <td><code>&lt;i&gt;Hello World&lt;/i&gt;</code></td>
+        <td><i>Hello World</i></td>
+    </tr>
+
+    <tr>
+        <td>&lt;u&gt;</td>
+        <td>Underlines the text</td>
+        <td><code>&lt;u&gt;Hello World&lt;/u&gt;</code></td>
+        <td><u>Hello World</u></td>
+    </tr>
+
+    <tr>
+        <td>&lt;strong&gt;</td>
+        <td>Important text (semantic)</td>
+        <td><code>&lt;strong&gt;Hello World&lt;/strong&gt;</code></td>
+        <td><strong>Hello World</strong></td>
+    </tr>
+
+    <tr>
+        <td>&lt;tt&gt;</td>
+        <td>Monospace text</td>
+        <td><code>&lt;tt&gt;Hello World&lt;/tt&gt;</code></td>
+        <td><tt>Hello World</tt></td>
+    </tr>
+
+    <tr>
+        <td>&lt;cite&gt;</td>
+        <td>Citation text</td>
+        <td><code>&lt;cite&gt;Hello World&lt;/cite&gt;</code></td>
+        <td><cite>Hello World</cite></td>
+    </tr>
+
+    <tr>
+        <td>&lt;strike&gt;</td>
+        <td>Strikethrough text</td>
+        <td><code>&lt;strike&gt;Hello World&lt;/strike&gt;</code></td>
+        <td><strike>Hello World</strike></td>
+    </tr>
+
+    <tr>
+        <td>&lt;big&gt;</td>
+        <td>Increases text size</td>
+        <td><code>&lt;big&gt;Hello World&lt;/big&gt;</code></td>
+        <td><big>Hello World</big></td>
+    </tr>
+
+    <tr>
+        <td>&lt;small&gt;</td>
+        <td>Decreases text size</td>
+        <td><code>&lt;small&gt;Hello World&lt;/small&gt;</code></td>
+        <td><small>Hello World</small></td>
+    </tr>
+
+    <tr>
+        <td>&lt;sub&gt;</td>
+        <td>Subscript text</td>
+        <td><code>a&lt;sub&gt;Hello World&lt;/sub&gt;</code></td>
+        <td>a<sub>Hello World</sub></td>
+    </tr>
+
+    <tr>
+        <td>&lt;sup&gt;</td>
+        <td>Superscript text</td>
+        <td><code>a&lt;sup&gt;Hello World&lt;/sup&gt;</code></td>
+        <td>a<sup>Hello World</sup></td>
+    </tr>
+
+    <tr>
+        <td>&lt;mark&gt;</td>
+        <td>Highlighted text</td>
+        <td><code>&lt;mark&gt;Hello World&lt;/mark&gt;</code></td>
+        <td><mark>Hello World</mark></td>
+    </tr>
+
+    <tr>
+        <td>&lt;ins&gt;</td>
+        <td>Inserted text</td>
+        <td><code>&lt;ins&gt;Hello World&lt;/ins&gt;</code></td>
+        <td><ins>Hello World</ins></td>
+    </tr>
+
+    <tr>
+        <td>&lt;del&gt;</td>
+        <td>Deleted text</td>
+        <td><code>&lt;del&gt;Hello World&lt;/del&gt;</code></td>
+        <td><del>Hello World</del></td>
+    </tr>
+    </tbody>
+
+</table>
+</center>
+</body>
+</html>

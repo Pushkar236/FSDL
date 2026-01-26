@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>JavaScript Click Demo</h1>
+    <button id="showBtn">Click me</button>
+    <p id="message"></p>
+
+    <script>
+        document.getElementById('showBtn').addEventListener('click', function() {
+            const msg = 'hello world';
+            document.getElementById('message').textContent = msg;
+            alert(msg);
+        });
+    </script>
+</body>
+</html>
+

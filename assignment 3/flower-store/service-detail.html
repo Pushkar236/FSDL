@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Service Details - Flower Store</title>
+  <!-- Bootstrap 5 CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="service-detail.css">
+</head>
+<body>
+  <!-- Navbar (shared) -->
+  <header id="site-header"></header>
+
+  <main class="py-5">
+    <div class="container">
+      <!-- Service Title -->
+      <div class="mb-5">
+        <h1 id="service-title" class="mb-3"></h1>
+        <p class="text-muted">Browse our collection of stunning decorations for your special occasion</p>
+      </div>
+
+      <!-- Gallery -->
+      <div class="service-gallery" id="service-gallery">
+        <!-- Gallery images will be populated here -->
+      </div>
+
+      <!-- Book Service Button -->
+      <div class="text-center my-5">
+        <button class="book-service-btn" id="book-service-toggle">Book Service</button>
+      </div>
+
+      <!-- Booking Form -->
+      <div class="booking-form-container" id="booking-form-container">
+        <h3>Book Your Service</h3>
+        <form id="booking-form">
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group">
+                <label for="service-type">Service Type</label>
+                <select id="service-type" name="service-type" required>
+                  <option value="">Select a service</option>
+                  <option value="birthday">Birthday Decor</option>
+                  <option value="wedding">Wedding Decor</option>
+                  <option value="ganpati">Ganpati Decor</option>
+                  <option value="garlands">Garlands</option>
+                  <option value="car">Car Decor</option>
+                  <option value="houseparty">House Party Decor</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <button type="submit" class="form-submit-btn">Submit</button>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <footer id="site-footer"></footer>
+
+  <script src="shared-utils.js"></script>
+  <script src="service-detail.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
